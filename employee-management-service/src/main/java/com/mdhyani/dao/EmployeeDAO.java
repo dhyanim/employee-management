@@ -12,4 +12,6 @@ public interface EmployeeDAO {
 	public void save(Employee emp);
 	
 	public List<Employee> getEmployees();
+	
+	public Employee getEmployeeById(Long Id);
 }

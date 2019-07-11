@@ -1,5 +1,6 @@
 package com.mdhyani.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@Override
 	public void save(Employee emp) {
+		emp.setHireDate(new Date());
 		employeeRepository.save(emp);
 	}
 
 	@Override
 	public List<Employee> getEmployees() {
 		return (List<Employee>) employeeRepository.findAll();
+	}
+
+	@Override
+	public Employee getEmployeeById(Long Id) {
+		return employeeRepository.findById(Id).get();
 	}
 
 }

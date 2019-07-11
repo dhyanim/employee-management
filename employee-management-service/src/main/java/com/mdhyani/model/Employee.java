@@ -15,6 +15,16 @@ public class Employee {
 
 	private String employeeName;
 	
+	public Employee() {
+		super();
+	}
+
+	public Employee(String employeeName, Double salary) {
+		super();
+		this.employeeName = employeeName;
+		this.salary = salary;
+	}
+
 	private Double salary;
 	
 	private Date hireDate;
